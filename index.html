@@ -247,6 +247,147 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/08/27/Debug Universal Link/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Junjie Lu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Ballad">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/08/27/Debug Universal Link/" itemprop="url">Debug Universal Link</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-08-27T22:37:03+08:00">
+                2020-08-27
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>这片文章主要是记录一下几个月前发生的一件事，其中有些经验值得写一写。</p>
+<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>有一次我们的测试给我提了一个bug是说App间的跳转不生效了。我们的App是通过Universal Link进行跳转的，所以我第一时间先在我的手机检查了一下 Safari 的跳转和 <code>apple-app-site-association</code> 文件内容，发现都没有问题。当时就很困惑到底哪里出了问题，所以去社区看了看有没有类似的问题，发现了两个radar:</p>
+<ul>
+<li><a href="https://openradar.appspot.com/45201697" target="_blank" rel="noopener">rdar://45201697: iOS 12 cannot fetch AASA file within 5 minutes after rebooting the phone</a></li>
+<li><a href="https://openradar.appspot.com/33893852" target="_blank" rel="noopener">rdar://33893852: Certain users fail to download apple-app-site-association when downloading the app</a></li>
+</ul>
+<p>看了一下基本都是下载 AASA 的问题，那问题来了，下载 AASA 文件的过程要怎么debug呢？</p>
+<h2 id="Debug"><a href="#Debug" class="headerlink" title="Debug"></a>Debug</h2><p>看了一下网上的方案，大致上分为两种：</p>
+<h3 id="Console"><a href="#Console" class="headerlink" title="Console"></a>Console</h3><p>根据这个讨论 <a href="https://discussions.apple.com/thread/250111811#:~:text=swcd%20is%20the%20shared%20web,When%20swcd" target="_blank" rel="noopener">what is SWC Agent Database in keychain?</a> 我们可以了解到 AASA 文件的下载是在 swcd 这个进程进行的。所以我们可以打开 Console，用手机重新安装App，选择查看 swcd 的log来进行debug。</p>
+<p>我尝试了这种方法，发现问题是出在测试的手机上有代理，导致 AASA 下载失败了。</p>
+<p>然而，后来我发现还有一种更神秘的方案可以进行debug。</p>
+<h3 id="Sysdiagnose"><a href="#Sysdiagnose" class="headerlink" title="Sysdiagnose"></a>Sysdiagnose</h3><p>苹果的工程师在去年曾经介绍了一种 debug universal link 的方式：<a href="https://twitter.com/grynspan/status/1136294209328041993" target="_blank" rel="noopener">Twitter</a>。结合 Sysdiagnose ，日志收集流程如下：</p>
+<ol>
+<li>复现问题</li>
+<li>同时按下两个音量键和侧边键1秒左右，如果成功触发 Sysdiagnose，你会感受到一个震动</li>
+<li>等待10分钟</li>
+<li>在手机的log中找到 <code>sysdiagnose_YYYY.MM.DD_HH-MM-SS-XX…</code> 这样匹配你的时间的文件并发到你的设备上</li>
+<li>打开其中的 <code>swcutil_show.txt</code> 你就能看到非常详细的 universal link 信息。</li>
+</ol>
+<p><img src="644ADED7-A50E-4BBF-99F4-D7AF976EBC20.png" alt=""></p>
+<p>好吧，真的是非常详细了。</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>学到了一些很tricky的东西。</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/08/27/图片渲染优化/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
@@ -659,7 +800,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
