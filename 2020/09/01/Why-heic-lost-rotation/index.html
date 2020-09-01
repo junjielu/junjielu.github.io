@@ -77,19 +77,19 @@
 
 
 
-<meta name="description" content="这片文章主要是记录一下几个月前发生的一件事，其中有些经验值得写一写。 背景有一次我们的测试给我提了一个bug是说App间的跳转不生效了。我们的App是通过Universal Link进行跳转的，所以我第一时间先在我的手机检查了一下 Safari 的跳转和 apple-app-site-association 文件内容，发现都没有问题。当时就很困惑到底哪里出了问题，所以去社区看了看有没有类似的问题，">
+<meta name="description" content="我们的项目中支持了heic的上传和展示。在iOS 14之前，一切都很美好，我们享受着heic带来的图片体积的减小。但是在iOS 14以及新的macOS中，事情发生了变化，非常多的heic图片的展示方向都和预想的不一样。这是怎么回事呢？ 背景我们的项目中在图片上传之前会对图片本身进行一些ImageI/O相关的处理。 首先，我们会将图片downsampling，对于图片的像素数量我们有一个最大的限制是">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Debug Universal Link">
-<meta property="og:url" content="http://yoursite.com/2020/08/27/Debug Universal Link/index.html">
+<meta property="og:title" content="Why heic lost rotation?">
+<meta property="og:url" content="http://yoursite.com/2020/09/01/Why-heic-lost-rotation/index.html">
 <meta property="og:site_name" content="Ballad">
-<meta property="og:description" content="这片文章主要是记录一下几个月前发生的一件事，其中有些经验值得写一写。 背景有一次我们的测试给我提了一个bug是说App间的跳转不生效了。我们的App是通过Universal Link进行跳转的，所以我第一时间先在我的手机检查了一下 Safari 的跳转和 apple-app-site-association 文件内容，发现都没有问题。当时就很困惑到底哪里出了问题，所以去社区看了看有没有类似的问题，">
+<meta property="og:description" content="我们的项目中支持了heic的上传和展示。在iOS 14之前，一切都很美好，我们享受着heic带来的图片体积的减小。但是在iOS 14以及新的macOS中，事情发生了变化，非常多的heic图片的展示方向都和预想的不一样。这是怎么回事呢？ 背景我们的项目中在图片上传之前会对图片本身进行一些ImageI/O相关的处理。 首先，我们会将图片downsampling，对于图片的像素数量我们有一个最大的限制是">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://yoursite.com/2020/08/27/Debug%20Universal%20Link/644ADED7-A50E-4BBF-99F4-D7AF976EBC20.png">
-<meta property="og:updated_time" content="2020-08-27T15:30:54.905Z">
+<meta property="og:image" content="http://yoursite.com/2020/09/01/Why-heic-lost-rotation/diff.png">
+<meta property="og:updated_time" content="2020-09-01T14:56:31.002Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Debug Universal Link">
-<meta name="twitter:description" content="这片文章主要是记录一下几个月前发生的一件事，其中有些经验值得写一写。 背景有一次我们的测试给我提了一个bug是说App间的跳转不生效了。我们的App是通过Universal Link进行跳转的，所以我第一时间先在我的手机检查了一下 Safari 的跳转和 apple-app-site-association 文件内容，发现都没有问题。当时就很困惑到底哪里出了问题，所以去社区看了看有没有类似的问题，">
-<meta name="twitter:image" content="http://yoursite.com/2020/08/27/Debug%20Universal%20Link/644ADED7-A50E-4BBF-99F4-D7AF976EBC20.png">
+<meta name="twitter:title" content="Why heic lost rotation?">
+<meta name="twitter:description" content="我们的项目中支持了heic的上传和展示。在iOS 14之前，一切都很美好，我们享受着heic带来的图片体积的减小。但是在iOS 14以及新的macOS中，事情发生了变化，非常多的heic图片的展示方向都和预想的不一样。这是怎么回事呢？ 背景我们的项目中在图片上传之前会对图片本身进行一些ImageI/O相关的处理。 首先，我们会将图片downsampling，对于图片的像素数量我们有一个最大的限制是">
+<meta name="twitter:image" content="http://yoursite.com/2020/09/01/Why-heic-lost-rotation/diff.png">
 
 
 
@@ -119,13 +119,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2020/08/27/Debug Universal Link/">
+  <link rel="canonical" href="http://yoursite.com/2020/09/01/Why-heic-lost-rotation/">
 
 
 
 
 
-  <title>Debug Universal Link | Ballad</title>
+  <title>Why heic lost rotation? | Ballad</title>
   
 
 
@@ -252,7 +252,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/08/27/Debug Universal Link/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/01/Why-heic-lost-rotation/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Junjie Lu">
@@ -269,7 +269,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Debug Universal Link</h1>
+          <h1 class="post-title" itemprop="name headline">Why heic lost rotation?</h1>
         
 
         <div class="post-meta">
@@ -281,8 +281,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-08-27T22:37:03+08:00">
-                2020-08-27
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-09-01T21:53:08+08:00">
+                2020-09-01
               </time>
             
 
@@ -319,28 +319,27 @@
       
 
       
-        <p>这片文章主要是记录一下几个月前发生的一件事，其中有些经验值得写一写。</p>
-<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>有一次我们的测试给我提了一个bug是说App间的跳转不生效了。我们的App是通过Universal Link进行跳转的，所以我第一时间先在我的手机检查了一下 Safari 的跳转和 <code>apple-app-site-association</code> 文件内容，发现都没有问题。当时就很困惑到底哪里出了问题，所以去社区看了看有没有类似的问题，发现了两个radar:</p>
+        <p>我们的项目中支持了heic的上传和展示。在iOS 14之前，一切都很美好，我们享受着heic带来的图片体积的减小。但是在iOS 14以及新的macOS中，事情发生了变化，非常多的heic图片的展示方向都和预想的不一样。这是怎么回事呢？</p>
+<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>我们的项目中在图片上传之前会对图片本身进行一些ImageI/O相关的处理。</p>
+<p>首先，我们会将图片downsampling，对于图片的像素数量我们有一个最大的限制是15000000个像素。对于图片最短边的尺寸我们限制为1500个像素。也就是说，假设原图大小是3000<em>4000，我们会把图片缩放到1500</em>2000。实现原理是通过<em>WWDC18 session 219</em>介绍的方式，通过ImageI/O进行处理（详情见<a href="https://junjielu.github.io/2020/08/27/%E5%9B%BE%E7%89%87%E6%B8%B2%E6%9F%93%E4%BC%98%E5%8C%96/" target="_blank" rel="noopener">图片渲染优化</a>）。</p>
+<p>downsampling完成之后，我们会根据图片的类型进行compress。比如对于jpeg以及heic，我们会进行一个0.75 compress quality的压缩（经验值）。</p>
+<h2 id="问题出在哪？"><a href="#问题出在哪？" class="headerlink" title="问题出在哪？"></a>问题出在哪？</h2><p>首先拿到heic原图和经过我们处理后的图片，通过<code>exiftool</code>打印图片的元信息，这里仅对相关的属性进行一个diff（左边是原图，右边是处理过的图片）：</p>
+<p><img src="diff.png" alt=""></p>
+<p>我们发现这个<code>Rotation</code>信息和之前的不一样了，于是我们合理怀疑一下是不是这个<code>Rotation</code>导致图片展示方向出了问题？</p>
+<p>然而根据我们之前的经验和相关的苹果的文档，图片的方向是根据<code>Orientation</code>来进行计算的，而两边图片元信息中的<code>Orientation</code>的值都是一样的：<code>Rotate 90 CW</code>即顺时针旋转90度。这又是为什么呢？</p>
+<p>后来我们得知，这个<code>Rotation</code>是heic独有的属性，因此我们推测，在新的系统上，苹果使用了这个<code>Rotation</code>来进行图片方向的判断。</p>
+<h2 id="诊断"><a href="#诊断" class="headerlink" title="诊断"></a>诊断</h2><p>Fine，那为什么经过我们处理后的图片会丢失<code>Rotation</code>相关的信息呢？经过了几天各种各样乱七八糟的尝试以及各地各式的资料搜集，我们依旧没能找到答案，这个<code>Rotation</code>信息就这么没了。。。</p>
+<p>于是我们作出了一个假设就是ImageI/O的处理就是会导致失去<code>Rotation</code>信息，那么我们解决的思路就分以下两种：</p>
 <ul>
-<li><a href="https://openradar.appspot.com/45201697" target="_blank" rel="noopener">rdar://45201697: iOS 12 cannot fetch AASA file within 5 minutes after rebooting the phone</a></li>
-<li><a href="https://openradar.appspot.com/33893852" target="_blank" rel="noopener">rdar://33893852: Certain users fail to download apple-app-site-association when downloading the app</a></li>
+<li>不遗余力把这个<code>Rotation</code>信息找回来</li>
+<li>在downsampling的时候让ImageI/O把图片先转一下</li>
 </ul>
-<p>看了一下基本都是下载 AASA 的问题，那问题来了，下载 AASA 文件的过程要怎么debug呢？</p>
-<h2 id="Debug"><a href="#Debug" class="headerlink" title="Debug"></a>Debug</h2><p>看了一下网上的方案，大致上分为两种：</p>
-<h3 id="Console"><a href="#Console" class="headerlink" title="Console"></a>Console</h3><p>根据这个讨论 <a href="https://discussions.apple.com/thread/250111811#:~:text=swcd%20is%20the%20shared%20web,When%20swcd" target="_blank" rel="noopener">what is SWC Agent Database in keychain?</a> 我们可以了解到 AASA 文件的下载是在 swcd 这个进程进行的。所以我们可以打开 Console，用手机重新安装App，选择查看 swcd 的log来进行debug。</p>
-<p>我尝试了这种方法，发现问题是出在测试的手机上有代理，导致 AASA 下载失败了。</p>
-<p>然而，后来我发现还有一种更神秘的方案可以进行debug。</p>
-<h3 id="Sysdiagnose"><a href="#Sysdiagnose" class="headerlink" title="Sysdiagnose"></a>Sysdiagnose</h3><p>苹果的工程师在去年曾经介绍了一种 debug universal link 的方式：<a href="https://twitter.com/grynspan/status/1136294209328041993" target="_blank" rel="noopener">Twitter</a>。结合 Sysdiagnose ，日志收集流程如下：</p>
-<ol>
-<li>复现问题</li>
-<li>同时按下两个音量键和侧边键1秒左右，如果成功触发 Sysdiagnose，你会感受到一个震动</li>
-<li>等待10分钟</li>
-<li>在手机的log中找到 <code>sysdiagnose_YYYY.MM.DD_HH-MM-SS-XX…</code> 这样匹配你的时间的文件并发到你的设备上</li>
-<li>打开其中的 <code>swcutil_show.txt</code> 你就能看到非常详细的 universal link 信息。</li>
-</ol>
-<p><img src="644ADED7-A50E-4BBF-99F4-D7AF976EBC20.png" alt=""></p>
-<p>好吧，真的是非常详细了。</p>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>学到了一些很tricky的东西。</p>
+<p>第二个方案实现起来很简单，只需要在downsampling的时候把<code>kCGImageSourceCreateThumbnailWithTransform</code>设为true就好了，但是我们又会发现，转过来了之后在旧的iOS版本上，图片方向又是错的了，原因可能是在旧版本上系统是根据<code>Orientation</code>来判断图片方向的。。。</p>
+<p>所以到目前为止，我们唯一稍微可行的方案是：在downsampling的时候把图片先转一下，在encode的阶段把meta data全丢掉，这样显示的就是对的，可这么做似乎并不优雅。</p>
+<h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><p>在一筹莫展之际，我随意地翻了翻ImageI/O相关的接口和注释，发现一个有趣的东西：<code>kCGImageDestinationImageMaxPixelSize</code>，这是一个在encode的时候的一个配置项，但是和downsampling的一个配置项非常像：<code>kCGImageSourceThumbnailMaxPixelSize</code>。</p>
+<p>于是我有了一个大胆的假设，是不是真正的最佳实践并不是手动downsampling+encode，而是通过encode的配置项实现downsampling，反正图片编码也会进行downsampling。</p>
+<p>于是我动手改造原来的代码，将手动downsampling的过程去掉，通过<code>CGImageDestinationAddImageFromSource</code>的方法传入图片的image source进行encode，而不是之前直接传入<code>CGImage</code>。果然，经过处理后的图片没有丢掉<code>Rotation</code>，我们得到了一个可能是完美的解决方案。</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>ImageI/O相关的文档和注释真的非常之少，而且缺乏系统指导性的最佳实践，甚至连苹果系统内部对于图片方向的判断逻辑都出现严重的前后不一。不过通过这个问题，我们推想出了一个最佳实践，那就是只有在显示渲染的时候，我们才去做手动downsampling，对于encode来说，downsampling的操作是可以传入参数自动完成的。</p>
 
       
     </div>
@@ -365,8 +364,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2020/08/27/图片渲染优化/" rel="next" title="图片渲染优化">
-                <i class="fa fa-chevron-left"></i> 图片渲染优化
+              <a href="/2020/08/27/Debug Universal Link/" rel="next" title="Debug Universal Link">
+                <i class="fa fa-chevron-left"></i> Debug Universal Link
               </a>
             
           </div>
@@ -374,10 +373,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2020/09/01/Why-heic-lost-rotation/" rel="prev" title="Why heic lost rotation?">
-                Why heic lost rotation? <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -507,7 +502,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#背景"><span class="nav-number">1.</span> <span class="nav-text">背景</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Debug"><span class="nav-number">2.</span> <span class="nav-text">Debug</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Console"><span class="nav-number">2.1.</span> <span class="nav-text">Console</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Sysdiagnose"><span class="nav-number">2.2.</span> <span class="nav-text">Sysdiagnose</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#总结"><span class="nav-number">3.</span> <span class="nav-text">总结</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#背景"><span class="nav-number">1.</span> <span class="nav-text">背景</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#问题出在哪？"><span class="nav-number">2.</span> <span class="nav-text">问题出在哪？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#诊断"><span class="nav-number">3.</span> <span class="nav-text">诊断</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#解决方案"><span class="nav-number">4.</span> <span class="nav-text">解决方案</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#总结"><span class="nav-number">5.</span> <span class="nav-text">总结</span></a></li></ol></div>
             
 
           </div>
