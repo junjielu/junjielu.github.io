@@ -77,13 +77,17 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="Ballad">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta name="description" content="本文是SwiftConcurrencyRoadmap的中文翻译  我们的目标是使Swift在并发编程方面方便、高效和安全。 本文概述了对语言的一些添加和更改来实现asynchronous functions和actor的特性。这些提议将被分别提出，但在许多情况下它们将相互依赖。此文档用于对它们进行统一。宣言可能描述多个可能的方向，与此不同，本文描述了处理Swift并发性的单一计划。 这些即将产生">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Swift并发路线图">
+<meta property="og:url" content="http://yoursite.com/2020/11/07/swiftconcurrencyroadmap/index.html">
 <meta property="og:site_name" content="Ballad">
+<meta property="og:description" content="本文是SwiftConcurrencyRoadmap的中文翻译  我们的目标是使Swift在并发编程方面方便、高效和安全。 本文概述了对语言的一些添加和更改来实现asynchronous functions和actor的特性。这些提议将被分别提出，但在许多情况下它们将相互依赖。此文档用于对它们进行统一。宣言可能描述多个可能的方向，与此不同，本文描述了处理Swift并发性的单一计划。 这些即将产生">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2020-11-07T09:46:15.325Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Ballad">
+<meta name="twitter:title" content="Swift并发路线图">
+<meta name="twitter:description" content="本文是SwiftConcurrencyRoadmap的中文翻译  我们的目标是使Swift在并发编程方面方便、高效和安全。 本文概述了对语言的一些添加和更改来实现asynchronous functions和actor的特性。这些提议将被分别提出，但在许多情况下它们将相互依赖。此文档用于对它们进行统一。宣言可能描述多个可能的方向，与此不同，本文描述了处理Swift并发性的单一计划。 这些即将产生">
 
 
 
@@ -113,13 +117,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/">
+  <link rel="canonical" href="http://yoursite.com/2020/11/07/swiftconcurrencyroadmap/">
 
 
 
 
 
-  <title>Ballad</title>
+  <title>Swift并发路线图 | Ballad</title>
   
 
 
@@ -138,8 +142,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
@@ -232,9 +235,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -264,9 +267,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/11/07/swiftconcurrencyroadmap/" itemprop="url">Swift并发路线图</a></h1>
+          <h1 class="post-title" itemprop="name headline">Swift并发路线图</h1>
         
 
         <div class="post-meta">
@@ -316,9 +317,7 @@
       
 
       
-        
-          
-            <blockquote>
+        <blockquote>
 <p>本文是<a href="https://github.com/airspeedswift/swift/blob/concurrency-roadmap/docs/ConcurrencyRoadmap.md" target="_blank" rel="noopener">SwiftConcurrencyRoadmap</a>的中文翻译</p>
 </blockquote>
 <p>我们的目标是使Swift在并发编程方面方便、高效和安全。</p>
@@ -430,8 +429,6 @@
 <li><strong>global actor</strong>是全局对象。它的受保护状态和actor方法可以分布在许多不同的类型中。它们可以标记为一个特定于actor的属性，在许多情况下Swift可以推断出这个属性。</li>
 </ul>
 
-          
-        
       
     </div>
     
@@ -448,152 +445,28 @@
       
 
       
-
-      
-
       
       
-        <div class="post-eof"></div>
+
       
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/01/Why-heic-lost-rotation/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Junjie Lu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Ballad">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/09/01/Why-heic-lost-rotation/" itemprop="url">Why heic lost rotation?</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
             
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-09-01T21:53:08+08:00">
-                2020-09-01
-              </time>
+              <a href="/2020/09/01/Why-heic-lost-rotation/" rel="next" title="Why heic lost rotation?">
+                <i class="fa fa-chevron-left"></i> Why heic lost rotation?
+              </a>
             
+          </div>
 
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
             
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
+          </div>
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          
-            <p>我们的项目中支持了heic的上传和展示。在iOS 14之前，一切都很美好，我们享受着heic带来的图片体积的减小。但是在iOS 14以及新的macOS中，事情发生了变化，非常多的heic图片的展示方向都和预想的不一样。这是怎么回事呢？</p>
-<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>我们的项目中在图片上传之前会对图片本身进行一些ImageI/O相关的处理。</p>
-<p>首先，我们会将图片downsampling，对于图片的像素数量我们有一个最大的限制是15000000个像素。对于图片最短边的尺寸我们限制为1500个像素。也就是说，假设原图大小是3000<em>4000，我们会把图片缩放到1500</em>2000。实现原理是通过<em>WWDC18 session 219</em>介绍的方式，通过ImageI/O进行处理（详情见<a href="https://junjielu.github.io/2020/08/27/%E5%9B%BE%E7%89%87%E6%B8%B2%E6%9F%93%E4%BC%98%E5%8C%96/" target="_blank" rel="noopener">图片渲染优化</a>）。</p>
-<p>downsampling完成之后，我们会根据图片的类型进行compress。比如对于jpeg以及heic，我们会进行一个0.75 compress quality的压缩（经验值）。</p>
-<h2 id="问题出在哪？"><a href="#问题出在哪？" class="headerlink" title="问题出在哪？"></a>问题出在哪？</h2><p>首先拿到heic原图和经过我们处理后的图片，通过<code>exiftool</code>打印图片的元信息，这里仅对相关的属性进行一个diff（左边是原图，右边是处理过的图片）：</p>
-<p><img src="diff.png" alt=""></p>
-<p>我们发现这个<code>Rotation</code>信息和之前的不一样了，于是我们合理怀疑一下是不是这个<code>Rotation</code>导致图片展示方向出了问题？</p>
-<p>然而根据我们之前的经验和相关的苹果的文档，图片的方向是根据<code>Orientation</code>来进行计算的，而两边图片元信息中的<code>Orientation</code>的值都是一样的：<code>Rotate 90 CW</code>即顺时针旋转90度。这又是为什么呢？</p>
-<p>后来我们得知，这个<code>Rotation</code>是heic独有的属性，因此我们推测，在新的系统上，苹果使用了这个<code>Rotation</code>来进行图片方向的判断。</p>
-<h2 id="诊断"><a href="#诊断" class="headerlink" title="诊断"></a>诊断</h2><p>Fine，那为什么经过我们处理后的图片会丢失<code>Rotation</code>相关的信息呢？经过了几天各种各样乱七八糟的尝试以及各地各式的资料搜集，我们依旧没能找到答案，这个<code>Rotation</code>信息就这么没了。。。</p>
-<p>于是我们作出了一个假设就是ImageI/O的处理就是会导致失去<code>Rotation</code>信息，那么我们解决的思路就分以下两种：</p>
-<ul>
-<li>不遗余力把这个<code>Rotation</code>信息找回来</li>
-<li>在downsampling的时候让ImageI/O把图片先转一下</li>
-</ul>
-<p>第二个方案实现起来很简单，只需要在downsampling的时候把<code>kCGImageSourceCreateThumbnailWithTransform</code>设为true就好了，但是我们又会发现，转过来了之后在旧的iOS版本上，图片方向又是错的了，原因可能是在旧版本上系统是根据<code>Orientation</code>来判断图片方向的。。。</p>
-<p>所以到目前为止，我们唯一稍微可行的方案是：在downsampling的时候把图片先转一下，在encode的阶段把meta data全丢掉，这样显示的就是对的，可这么做似乎并不优雅。</p>
-<h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><p>在一筹莫展之际，我随意地翻了翻ImageI/O相关的接口和注释，发现一个有趣的东西：<code>kCGImageDestinationImageMaxPixelSize</code>，这是一个在encode的时候的一个配置项，但是和downsampling的一个配置项非常像：<code>kCGImageSourceThumbnailMaxPixelSize</code>。</p>
-<p>于是我有了一个大胆的假设，是不是真正的最佳实践并不是手动downsampling+encode，而是通过encode的配置项实现downsampling，反正图片编码也会进行downsampling。</p>
-<p>于是我动手改造原来的代码，将手动downsampling的过程去掉，通过<code>CGImageDestinationAddImageFromSource</code>的方法传入图片的image source进行encode，而不是之前直接传入<code>CGImage</code>。果然，经过处理后的图片没有丢掉<code>Rotation</code>，我们得到了一个可能是完美的解决方案。</p>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>ImageI/O相关的文档和注释真的非常之少，而且缺乏系统指导性的最佳实践，甚至连苹果系统内部对于图片方向的判断逻辑都出现严重的前后不一。不过通过这个问题，我们推想出了一个最佳实践，那就是只有在显示渲染的时候，我们才去做手动downsampling，对于encode来说，downsampling的操作是可以传入参数自动完成的。</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -603,530 +476,11 @@
   </article>
 
 
-    
-      
 
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/08/27/Debug Universal Link/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Junjie Lu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Ballad">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/08/27/Debug Universal Link/" itemprop="url">Debug Universal Link</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-08-27T22:37:03+08:00">
-                2020-08-27
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>这片文章主要是记录一下几个月前发生的一件事，其中有些经验值得写一写。</p>
-<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>有一次我们的测试给我提了一个bug是说App间的跳转不生效了。我们的App是通过Universal Link进行跳转的，所以我第一时间先在我的手机检查了一下 Safari 的跳转和 <code>apple-app-site-association</code> 文件内容，发现都没有问题。当时就很困惑到底哪里出了问题，所以去社区看了看有没有类似的问题，发现了两个radar:</p>
-<ul>
-<li><a href="https://openradar.appspot.com/45201697" target="_blank" rel="noopener">rdar://45201697: iOS 12 cannot fetch AASA file within 5 minutes after rebooting the phone</a></li>
-<li><a href="https://openradar.appspot.com/33893852" target="_blank" rel="noopener">rdar://33893852: Certain users fail to download apple-app-site-association when downloading the app</a></li>
-</ul>
-<p>看了一下基本都是下载 AASA 的问题，那问题来了，下载 AASA 文件的过程要怎么debug呢？</p>
-<h2 id="Debug"><a href="#Debug" class="headerlink" title="Debug"></a>Debug</h2><p>看了一下网上的方案，大致上分为两种：</p>
-<h3 id="Console"><a href="#Console" class="headerlink" title="Console"></a>Console</h3><p>根据这个讨论 <a href="https://discussions.apple.com/thread/250111811#:~:text=swcd%20is%20the%20shared%20web,When%20swcd" target="_blank" rel="noopener">what is SWC Agent Database in keychain?</a> 我们可以了解到 AASA 文件的下载是在 swcd 这个进程进行的。所以我们可以打开 Console，用手机重新安装App，选择查看 swcd 的log来进行debug。</p>
-<p>我尝试了这种方法，发现问题是出在测试的手机上有代理，导致 AASA 下载失败了。</p>
-<p>然而，后来我发现还有一种更神秘的方案可以进行debug。</p>
-<h3 id="Sysdiagnose"><a href="#Sysdiagnose" class="headerlink" title="Sysdiagnose"></a>Sysdiagnose</h3><p>苹果的工程师在去年曾经介绍了一种 debug universal link 的方式：<a href="https://twitter.com/grynspan/status/1136294209328041993" target="_blank" rel="noopener">Twitter</a>。结合 Sysdiagnose ，日志收集流程如下：</p>
-<ol>
-<li>复现问题</li>
-<li>同时按下两个音量键和侧边键1秒左右，如果成功触发 Sysdiagnose，你会感受到一个震动</li>
-<li>等待10分钟</li>
-<li>在手机的log中找到 <code>sysdiagnose_YYYY.MM.DD_HH-MM-SS-XX…</code> 这样匹配你的时间的文件并发到你的设备上</li>
-<li>打开其中的 <code>swcutil_show.txt</code> 你就能看到非常详细的 universal link 信息。</li>
-</ol>
-<p><img src="644ADED7-A50E-4BBF-99F4-D7AF976EBC20.png" alt=""></p>
-<p>好吧，真的是非常详细了。</p>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>学到了一些很tricky的东西。</p>
-
-          
-        
+    <div class="post-spread">
       
     </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
   </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/08/27/图片渲染优化/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Junjie Lu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Ballad">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/08/27/图片渲染优化/" itemprop="url">图片渲染优化</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-08-27T01:21:01+08:00">
-                2020-08-27
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>图片渲染是iOS app中必不可少的一环，当我们在屏幕上展示一幅图片的时候，一个 workflow 应该是这样的：</p>
-<ul>
-<li>拿到图片的 Data buffer</li>
-<li>decode 得到图片的 Image buffer</li>
-<li>将 Image buffer 渲染到屏幕上</li>
-</ul>
-<p>这个流程看上去没有问题，但是有一点值得我们注意。假设我们要显示一张 2000 <em> 1000 的图片，在decode环节我们decode出来的 image buffer 的大小就会是 2000 </em> 1000 <em> 4 byte = 7.6MB，这里我们会发现 image buffer 的大小和图片的分辨率是正相关的，但有的时候，图片和最终展示在界面上的尺寸是不同的。比如这张 2000 </em> 1000 的图片，假如是展示在一个 200 * 100 的 view 上，那显然有很多像素信息是会被浪费掉的。</p>
-<p>如何解决这个问题呢？</p>
-<h2 id="Downsampling"><a href="#Downsampling" class="headerlink" title="Downsampling"></a>Downsampling</h2><p>我们的思路可能是说建立一个新的 workflow ：</p>
-<ul>
-<li>拿到图片的 Data buffer</li>
-<li>根据显示区域的大小建立一个 thumbnail 区域</li>
-<li>decode 图片的 Data buffer 到这个 thumbnail 区域，得到一个小一些的 Image buffer</li>
-<li>将 Image buffer 渲染到屏幕上</li>
-</ul>
-<p>WWDC18-session219 详细介绍了如何去进行这样的 downsampling，同事值得注意的是我们可以将 downsampling 的过程放在后台线程进行，再将结果回调到主线程进行展示，这也很大程度上能缓解 CPU 的压力。</p>
-<p><img src="219_hd_image_and_graphics_best_practices-0001.png" alt=""></p>
-<h2 id="Rasterization"><a href="#Rasterization" class="headerlink" title="Rasterization"></a>Rasterization</h2><p>别误会，这里的 rasterization 并不是 <code>CALayer</code> 的概念。我们在图片渲染上头疼的点在于图片像素尺寸和界面上展示的尺寸很可能是不同的。这里其实我们还会想到一种方案来解决：使用矢量图。</p>
-<p>矢量图和位图不同，矢量图并不存储图片的像素信息，它是通过数学表达的方式通过点和曲线的连接来构成图形。图形层显示矢量图会进行 rasterization 来将矢量图信息转换成位图的信息并直接渲染到 frame buffer 上。</p>
-<p>在 iOS 13 以前，我们使用矢量图的方案是通过在 image assets 添加PDF文件来实现。Xcode 会在编译期来进行 rasterization 将图片转换成位图（当然这样做也失去了矢量图的一些特性）。</p>
-<p>在 iOS 13之后，我们可以通过私有库 <code>CoreSVG</code> 进行 SVG 的渲染，在未来，我们也有希望使用 <a href="https://svgwg.org/specs/svg-native/" target="_blank" rel="noopener">SVG Native</a> 来进行规范化的矢量图形渲染。</p>
-<h2 id="Rendering-Speed"><a href="#Rendering-Speed" class="headerlink" title="Rendering Speed"></a>Rendering Speed</h2><p>通过上面的做法，我们基本已经避免了在渲染层面上浪费过多的内存的情况，那么我们如何再进一步去优化渲染速度呢？</p>
-<p>从 iOS 10 开始， <code>UICollectionView</code> 就支持了通过 <a href="https://developer.apple.com/documentation/uikit/uicollectionviewdatasourceprefetching" target="_blank" rel="noopener">UICollectionViewDataSourcePrefetching</a> 来通过预加载来异步获取数据的方案。我们可以通过预加载来提前在后台线程执行图片的获取和解码，在用户视角上提高渲染的速度。</p>
-<p>还有一种方案也是通过提前解码来实现加速渲染的，那就是很多第三方库所使用的预解码技术。</p>
-<p>在这之前我们先了解一下 <code>Core Animation</code> 的渲染原理。</p>
-<p><img src="1*IVE7oJ666BYq8RtLq-Vs4Q.png" alt=""></p>
-<p>用人话来说就是对于 <code>UIImageView</code> 来说，渲染流程是这样的：</p>
-<ul>
-<li>拿到 <code>UIImageView</code> 的 <code>layer.contents</code></li>
-<li>从拿到的 <code>CGimage</code> decode 获取 image buffer</li>
-<li>向GPU发送 Draw Calls</li>
-<li>GPU进行渲染然后将结果展示在硬件上</li>
-</ul>
-<p>那么我们的优化方向就是如何让 render server 提前拿到 image buffer，这样就能加快渲染速度了。这里我们就要说说 <code>CGImage</code> 这个东西了。</p>
-<h3 id="CGImage"><a href="#CGImage" class="headerlink" title="CGImage"></a>CGImage</h3><p>我们先看看 <code>CGImage</code> 的初始化方法：</p>
-<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">init</span>?(width: <span class="type">Int</span>, </span><br><span class="line">height: <span class="type">Int</span>, </span><br><span class="line">bitsPerComponent: <span class="type">Int</span>, </span><br><span class="line">bitsPerPixel: <span class="type">Int</span>, </span><br><span class="line">bytesPerRow: <span class="type">Int</span>, </span><br><span class="line">space: <span class="type">CGColorSpace</span>, </span><br><span class="line">bitmapInfo: <span class="type">CGBitmapInfo</span>, </span><br><span class="line">provider: <span class="type">CGDataProvider</span>, </span><br><span class="line">decode: <span class="type">UnsafePointer</span>&lt;<span class="type">CGFloat</span>&gt;?, </span><br><span class="line">shouldInterpolate: <span class="type">Bool</span>, </span><br><span class="line">intent: <span class="type">CGColorRenderingIntent</span>)</span><br></pre></td></tr></table></figure>
-<p>值得注意的是这个 provider，就是通过它来生成渲染所需要的 image buffer。经过研究，发现这里创建出 <code>CGImage</code> 但并没有进行 decode，而是在需要显示渲染的时候通过调用 <code>CGDataProviderCopyData</code> 来触发decode。所以我们这时列一下整个解码流程：</p>
-<ul>
-<li>获取 <code>layer.contents</code></li>
-<li>获取 <code>image.cgImage</code></li>
-<li><code>CGImageGetDataProvider</code> 获取data</li>
-<li><code>CGDataProviderRetainBytePtr</code> 触发解码</li>
-<li><code>CGDataProviderDirectCallbacks</code> 拿到数据</li>
-<li>ImageIO进行解码拿到 image buffer</li>
-</ul>
-<p>了解了整个流程我们就知道了 iOS 系统的方案在生成 <code>CGImage</code> 的时候并没有创建完整的 image buffer ，而是在渲染的时候进行处理。那我们优化的方向就是用空间换时间，如果能在生成 <code>CGImage</code> 生成的时候直接把 image buffer 创建好，那渲染就会快很多了。</p>
-<p>主流图片库的做法也很简单，通过<code>CGContextDrawImage</code> 绘制一遍生成出来的 <code>CGImage</code> 就可以了。</p>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>这篇文章主要讲述了三种图片渲染上优化的方向，希望可以和对图片渲染有兴趣的朋友多多交流。</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/10/30/Haskell/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Junjie Lu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Ballad">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/10/30/Haskell/" itemprop="url">Haskell</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-30T10:57:01+08:00">
-                2018-10-30
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p><img src="http://www.cis.upenn.edu/~cis194/spring13/images/haskell-logo-small.png" alt="Haskell"></p>
-<blockquote>
-<p>Haskell is a <em>lazy, functional</em> programming language created in the late 1980’s by a committee of academics. </p>
-</blockquote>
-<ul>
-<li><strong>functional</strong>: functions are <em>first-class</em>, centered around <em>evaluating expressions</em> rather than <em>executing instructions</em>.</li>
-<li><strong>pure</strong>: <em>immutable</em>, no <em>side effects</em>, calling the same function with the same arguments results in the same output every time.</li>
-<li><strong>lazy</strong>: <em>call-by-need</em>, expressions are <em>not evaluated until their results are actually needed</em>.Alone with <em>Memoization</em></li>
-<li><strong>statically typed</strong>: as Swift.Every Haskell expression has a type, and types are all checked at <em>compile-time</em>.</li>
-<li><strong>abstraction</strong>: <em>parametric polymorphism</em>, <em>higher-order functions</em></li>
-<li><strong>wholemeal programming</strong>: </li>
-</ul>
-<blockquote>
-<p>“Functional languages excel at wholemeal programming, a term coined by Geraint Jones. Wholemeal programming means to think big: work with an entire list, rather than a sequence of elements; develop a solution space, rather than an individual solution; imagine a graph, rather than a single path. The wholemeal approach often offers new insights or provides new perspectives on a given problem. It is nicely complemented by the idea of projective programming: first solve a more general problem, then extract the interesting bits and pieces by transforming the general program into more specialised ones.” — Ralf Hinze</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&gt; int acc = 0;</span><br><span class="line">for ( int i = 0; i &lt; lst.length; i++ ) &#123;</span><br><span class="line">  acc = acc + 3 * lst[i];</span><br><span class="line">&#125;</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
-</blockquote>
-<blockquote>
-<p>to</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt; sum (map (3*) lst)</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
-</blockquote>
-<h2 id="Lazy-evaluation"><a href="#Lazy-evaluation" class="headerlink" title="Lazy evaluation"></a>Lazy evaluation</h2><h4 id="Strict-evaluation"><a href="#Strict-evaluation" class="headerlink" title="Strict evaluation"></a>Strict evaluation</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">f (release_monkeys(), increment_counter())</span><br></pre></td></tr></table></figure>
-<p>If the releasing of monkeys and incrementing of the counter could independently happen, or not, in either order, depending on whether f happens to use their results, it would be extremely confusing. When such <em>“side effects”</em> are allowed, strict evaluation is really what you want.</p>
-<h4 id="Side-effects-and-purity"><a href="#Side-effects-and-purity" class="headerlink" title="Side effects and purity"></a>Side effects and purity</h4><p>By “side effect” we mean anything that <em>causes evaluation of an expression to interact with something outside itself</em>.The root issue is that such outside interactions are time-sensitive.</p>
-<ul>
-<li>No global variable</li>
-<li>No output to screen</li>
-<li>No reading from a file or the network</li>
-</ul>
-<p>WTF……</p>
-<p>The solution is IO monad.</p>
-<h4 id="Consequences"><a href="#Consequences" class="headerlink" title="Consequences"></a>Consequences</h4><ul>
-<li>Purity</li>
-<li>Tricky space usage</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">-- Standard library function foldl, provided for reference</span><br><span class="line">foldl :: (b -&gt; a -&gt; b) -&gt; b -&gt; [a] -&gt; b</span><br><span class="line">foldl _ z []     = z</span><br><span class="line">foldl f z (x:xs) = foldl f (f z x) xs</span><br><span class="line"></span><br><span class="line">foldl (+) 0 [1,2,3]</span><br><span class="line">= foldl (+) (0+1) [2,3]</span><br><span class="line">= foldl (+) ((0+1)+2) [3]</span><br><span class="line">= foldl (+) (((0+1)+2)+3) []</span><br><span class="line">= (((0+1)+2)+3)</span><br><span class="line">= ((1+2)+3)</span><br><span class="line">= (3+3)</span><br><span class="line">= 6</span><br><span class="line"></span><br><span class="line">foldl&apos; (+) 0 [1,2,3]</span><br><span class="line">= foldl&apos; (+) (0+1) [2,3]</span><br><span class="line">= foldl&apos; (+) 1 [2,3]</span><br><span class="line">= foldl&apos; (+) (1+2) [3]</span><br><span class="line">= foldl&apos; (+) 3 [3]</span><br><span class="line">= foldl&apos; (+) (3+3) []</span><br><span class="line">= foldl&apos; (+) 6 []</span><br><span class="line">= 6</span><br></pre></td></tr></table></figure>
-<p>Consider if there is a very long list, it leads to stack overflow.</p>
-<ul>
-<li>Short-circuiting operators</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">(&amp;&amp;) :: Bool -&gt; Bool -&gt; Bool</span><br><span class="line">True  &amp;&amp; x = x</span><br><span class="line">False &amp;&amp; _ = False</span><br></pre></td></tr></table></figure>
-<ul>
-<li>Infinite data structures</li>
-<li>Pipelining/wholemeal programming<ul>
-<li>due to laziness, each stage of the pipeline can operate in lockstep, only generating each bit of the result as it is demanded by the next stage in the pipeline.</li>
-</ul>
-</li>
-<li>Thunk.</li>
-<li>Confilct with parallel computing.</li>
-</ul>
-<h2 id="Functors"><a href="#Functors" class="headerlink" title="Functors"></a>Functors</h2><ul>
-<li>map :: (a -&gt; b) -&gt; [a] -&gt; [b]</li>
-<li>treeMap :: (a -&gt; b) -&gt; Tree a -&gt; Tree b</li>
-<li>maybeMap :: (a -&gt; b) -&gt; Maybe a -&gt; Maybe b</li>
-</ul>
-<p>why not</p>
-<p><code>thingMap :: (a -&gt; b) -&gt; f a -&gt; f b</code></p>
-<p>Since f is type variable, we can make a type class, which is traditionally called <strong>Functor</strong>:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">class Functor f where</span><br><span class="line">  fmap :: (a -&gt; b) -&gt; f a -&gt; f b</span><br><span class="line">  </span><br><span class="line">(&lt;$&gt;) :: Functor f =&gt; (a -&gt; b) -&gt; f a -&gt; f b</span><br><span class="line">(&lt;$&gt;) = fmap</span><br><span class="line">  </span><br><span class="line">instance Functor [] where</span><br><span class="line">  fmap _ []     = []</span><br><span class="line">  fmap f (x:xs) = f x : fmap f xs</span><br><span class="line">  </span><br><span class="line">instance Functor Maybe where</span><br><span class="line">  fmap _ Nothing  = Nothing</span><br><span class="line">  fmap h (Just a) = Just (h a)</span><br></pre></td></tr></table></figure>
-<h2 id="Applicative-functors"><a href="#Applicative-functors" class="headerlink" title="Applicative functors"></a>Applicative functors</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">type Name = String</span><br><span class="line"></span><br><span class="line">data Employee = Employee &#123; name    :: Name</span><br><span class="line">                         , phone   :: String &#125;</span><br></pre></td></tr></table></figure>
-<p>So Employee is </p>
-<p><code>Employee :: Name -&gt; String -&gt; Employee</code></p>
-<p>However, sometimes we want this:</p>
-<p><code>(Name -&gt; String -&gt; Employee) -&gt; Maybe Name -&gt; Maybe String -&gt; Maybe Employee</code></p>
-<p>and why not provide this as well:</p>
-<p><code>Name -&gt; String -&gt; Employee) -&gt; [Name] -&gt; [String] -&gt; [Employee]</code></p>
-<p>Seems wec can use <code>fmap</code> to do this job, </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">class Functor f where</span><br><span class="line">  fmap2 :: (a -&gt; b -&gt; c) -&gt; f a -&gt; f b -&gt; f c</span><br><span class="line">  </span><br><span class="line">fmap2 :: Functor f =&gt; (a -&gt; b -&gt; c) -&gt; (f a -&gt; f b -&gt; f c)</span><br><span class="line">fmap2 h fa fb = ???</span><br><span class="line"></span><br><span class="line">h :: a -&gt; (b -&gt; c)</span><br><span class="line">fmap h :: fa -&gt; f(b -&gt; c)</span><br><span class="line">fmap h fa :: f(b -&gt; c)</span><br></pre></td></tr></table></figure>
-<p>The reason why we cannot implement fmap2 is <code>fmap h fa :: f (b -&gt; c)</code>, and we cannot handle <code>f (b -&gt; c)</code> with <code>f b</code></p>
-<p>So it’s time to introduce <em>Applicative</em></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">class Functor f =&gt; Applicative f where</span><br><span class="line">  pure  :: a -&gt; f a</span><br><span class="line">  (&lt;*&gt;) :: f (a -&gt; b) -&gt; f a -&gt; f b</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">liftA2 :: Applicative f =&gt; (a -&gt; b -&gt; c) -&gt; f a -&gt; f b -&gt; f c</span><br><span class="line">liftA2 h fa fb = (h `fmap` fa) &lt;*&gt; fb</span><br><span class="line"></span><br><span class="line">liftA3 :: Applicative f =&gt; (a -&gt; b -&gt; c -&gt; d) -&gt; f a -&gt; f b -&gt; f c -&gt; f d</span><br><span class="line">liftA3 h fa fb fc = ((h &lt;$&gt; fa) &lt;*&gt; fb) &lt;*&gt; fc</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>Law for <code>Applicative</code>:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt; f `fmap` x === pure f &lt;*&gt; x</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
-</blockquote>
-<h2 id="Monads"><a href="#Monads" class="headerlink" title="Monads"></a>Monads</h2><p>From <em>functor</em> and <em>applicative</em>, we can see computations with a fixed structure.</p>
-<p>However, sometimes we want to be able to decide what to do based on some intermediate results.</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">newtype Parser a = Parser &#123; runParser :: String -&gt; Maybe (a, String) &#125;</span><br></pre></td></tr></table></figure>
-<p>Suppose we are trying to parse a file containing a sequence of numbers, like this:</p>
-<blockquote>
-<p>4 78 19 3 44 3 1 7 5 2 3 2</p>
-</blockquote>
-<p>So the example above could be broken up into groups like this:</p>
-<blockquote>
-<p>78 19 3 44   – first group<br>1 7 5        – second group<br>3 2          – third group</p>
-</blockquote>
-<p>So what we need is some thing like this:<br><code>parseFile :: Parser [[Int]]</code> </p>
-<p><em>Applicative</em> gives us no way to decide what to do next based on previous results: we must decide in advance what parsing operations we are going to run, before we see the results.</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">class Monad m where</span><br><span class="line">  return :: a -&gt; m a</span><br><span class="line"></span><br><span class="line">  (&gt;&gt;=) :: m a -&gt; (a -&gt; m b) -&gt; m b</span><br><span class="line"></span><br><span class="line">  (&gt;&gt;)  :: m a -&gt; m b -&gt; m b</span><br><span class="line">  m1 &gt;&gt; m2 = m1 &gt;&gt;= \_ -&gt; m2</span><br></pre></td></tr></table></figure>
-<p><code>m</code> refer to <em>monads</em> and <code>m a</code> refer to <em>mobits</em>. A mobit of type <code>m</code> a represents a computation which results in a value (or several values, or no values) of type <code>a</code>.</p>
-<p>A function which will choose the next computation to run based on the result(s) of the first computation.</p>
-<p>So all (&gt;&gt;=) really does is put together two mobits to produce a larger one, which first runs one and then the other, returning the result of the second one. </p>
-<h2 id="Resource"><a href="#Resource" class="headerlink" title="Resource"></a>Resource</h2><p><a href="http://www.seas.upenn.edu/~cis194/spring13/lectures.html" target="_blank" rel="noopener">CIS 194</a></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-  </section>
-
-  
 
 
           </div>
@@ -1134,6 +488,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -1154,8 +512,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -1213,6 +580,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#现状"><span class="nav-number">1.</span> <span class="nav-text">现状</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#对于第一阶段的提议"><span class="nav-number">2.</span> <span class="nav-text">对于第一阶段的提议</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Actor-Isolation以及第二阶段"><span class="nav-number">3.</span> <span class="nav-text">Actor Isolation以及第二阶段</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#第一阶段：基本的Actor-Isolation"><span class="nav-number">3.1.</span> <span class="nav-text">第一阶段：基本的Actor Isolation</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第二阶段：完整的Actor-Isolation"><span class="nav-number">3.2.</span> <span class="nav-text">第二阶段：完整的Actor Isolation</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#基本概念表"><span class="nav-number">4.</span> <span class="nav-text">基本概念表</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -1346,6 +729,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
